@@ -14,15 +14,15 @@
         },
     
     
-          "functionrawuploaderamplify8bf5e61cName": {
+          "functioncryptofunctionName": {
             "Type": "String",
-            "Default": "functionrawuploaderamplify8bf5e61cName"
+            "Default": "functioncryptofunctionName"
           },
         
           
-          "functionrawuploaderamplify8bf5e61cArn": {
+          "functioncryptofunctionArn": {
             "Type": "String",
-            "Default": "functionrawuploaderamplify8bf5e61cArn"
+            "Default": "functioncryptofunctionArn"
           }
         
           
@@ -45,16 +45,16 @@
         
         
         
-      "rrawuploaderapi": {
+      "cryptoapi": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "rrawuploaderapi",
+          "Name": "cryptoapi",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "rrawuploaderapi"
+              "title": "cryptoapi"
             },
             "host": {
                 "Fn::Join": [
@@ -176,7 +176,7 @@
                             
                             {
                                 
-                                "Ref": "functionrawuploaderamplify8bf5e61cArn"
+                                "Ref": "functioncryptofunctionArn"
                             },
                             
                             "/invocations"
@@ -275,7 +275,7 @@
                           
                           {
                             
-                            "Ref": "functionrawuploaderamplify8bf5e61cArn"
+                            "Ref": "functioncryptofunctionArn"
                           },
                           
                           "/invocations"
@@ -332,12 +332,12 @@
                   
         
         
-        "functionrawuploaderamplify8bf5e61cPermissionrrawuploaderapi": {
+        "functioncryptofunctionPermissioncryptoapi": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionrawuploaderamplify8bf5e61cName"
+                        "Ref":  "functioncryptofunctionName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -356,7 +356,7 @@
                             },
                             ":",
                             {
-                                "Ref": "rrawuploaderapi"
+                                "Ref": "cryptoapi"
                             },
                             "/*/*/*"
                         ]
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWrrawuploaderapi": {
+      "DeploymentAPIGWcryptoapi": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -381,7 +381,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "rrawuploaderapi"
+            "Ref": "cryptoapi"
           }
         }
       }
@@ -389,15 +389,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "rrawuploaderapi"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "cryptoapi"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "rrawuploaderapi"
+          "Value": "cryptoapi"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "rrawuploaderapi"}
+          "Value": {"Ref": "cryptoapi"}
         }
     }
   }

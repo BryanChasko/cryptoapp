@@ -33,12 +33,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"rawuploaderamplify8bf5e61c",
+						"cryptofunction",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"rawuploaderamplify8bf5e61c",
+									"cryptofunction",
 									"-",
 									{
 										"Ref": "env"
@@ -68,8 +68,8 @@
 				"Layers": [],
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-rawuploaderamplify-local-121334-deployment",
-					"S3Key": "amplify-builds/rawuploaderamplify8bf5e61c-4a366548535053715362-build.zip"
+					"S3Bucket": "amplify-cryptoapp-local-115625-deployment",
+					"S3Key": "amplify-builds/cryptofunction-444932742f664d6a5635-build.zip"
 				}
 			}
 		},
@@ -79,12 +79,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"rawuploaderamplifyLambdaRole67a5cb94",
+						"cryptoappLambdaRolea1190d21",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"rawuploaderamplifyLambdaRole67a5cb94",
+									"cryptoappLambdaRolea1190d21",
 									"-",
 									{
 										"Ref": "env"

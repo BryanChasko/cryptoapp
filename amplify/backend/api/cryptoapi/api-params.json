@@ -2,29 +2,29 @@
     "paths": [
         {
             "name": "/coins",
-            "lambdaFunction": "rawuploaderamplify8bf5e61c",
+            "lambdaFunction": "cryptofunction",
             "privacy": {
                 "open": true
             }
         }
     ],
-    "resourceName": "rrawuploaderapi",
-    "apiName": "rrawuploaderapi",
+    "resourceName": "cryptoapi",
+    "apiName": "cryptoapi",
     "functionArns": [
         {
-            "lambdaFunction": "rawuploaderamplify8bf5e61c"
+            "lambdaFunction": "cryptofunction"
         }
     ],
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-rawuploaderamplify-local-121334-authRole",
-        "unAuthRoleName": "amplify-rawuploaderamplify-local-121334-unauthRole"
+        "authRoleName": "amplify-cryptoapp-local-115625-authRole",
+        "unAuthRoleName": "amplify-cryptoapp-local-115625-unauthRole"
     },
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "rawuploaderamplify8bf5e61c",
+            "resourceName": "cryptofunction",
             "attributes": [
                 "Name",
                 "Arn"
