@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/coins",
+            "lambdaFunction": "rawuploaderamplify8bf5e61c",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "rrawuploaderapi",
+    "apiName": "rrawuploaderapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "rawuploaderamplify8bf5e61c"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-rawuploaderamplify-local-121334-authRole",
+        "unAuthRoleName": "amplify-rawuploaderamplify-local-121334-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "rawuploaderamplify8bf5e61c",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
